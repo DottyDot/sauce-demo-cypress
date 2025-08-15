@@ -1,8 +1,11 @@
 import loginPage from "../support/pageObject/loginPage"
 
 describe('login', () => {
+  beforeEach(() => {
+    cy.visit('/')
+  })
+  
   it('User logs in with standard user data', () => {
-    cy.visit('https://www.saucedemo.com')
     loginPage.getStandardUser().then((user) => {
       loginPage.logInWithData(user)
     })
@@ -10,7 +13,6 @@ describe('login', () => {
   }),
 
   it('User tries to log in with locked out user data and gets an error', () => {
-    cy.visit('https://www.saucedemo.com')
     loginPage.getLockedOutUser().then((user) => {
       loginPage.logInWithData(user)
     })
