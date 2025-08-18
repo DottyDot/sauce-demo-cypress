@@ -2,10 +2,10 @@
 
 class loginPage{
     elements ={
-        usernameField : () => cy.get("[data-test=username]"),
-        passwordField : () => cy.get("[data-test=password]"),
-        loginButton : () => cy.get("[data-test=login-button]"),
-        errorMessage : () => cy.get("[data-test=error]")
+        usernameField : () => cy.getByDataTestId('username'),
+        passwordField : () => cy.getByDataTestId('password'),
+        loginButton : () => cy.getByDataTestId('login-button'),
+        errorMessage : () => cy.getByDataTestId('error')
     }
 
     confirmUserNotLoggedIn(){
@@ -13,19 +13,19 @@ class loginPage{
     }
 
     getErrorUser(){
-      return cy.fixture('users/errorUser.json');
+      return cy.fixture('users/errorUser.json')
     }
 
     getLockedOutUser(){
-      return cy.fixture('users/lockedOutUser.json');
+      return cy.fixture('users/lockedOutUser.json')
     }
 
     getProblemUser(){
-      return cy.fixture('users/problemUser.json');
+      return cy.fixture('users/problemUser.json')
     }
 
     getStandardUser(){
-      return cy.fixture('users/standardUser.json');
+      return cy.fixture('users/standardUser.json')
     }
 
 
@@ -43,4 +43,4 @@ class loginPage{
     
 }
 
-module.exports = new loginPage();
+module.exports = new loginPage()
