@@ -11,6 +11,10 @@ class loginPage{
         //logOffBtn : () => cy.get("#logout")
     }
 
+    confirmUserNotLoggedIn(){
+      cy.url().should('include', 'www.saucedemo.com').and('not.include', 'inventory.html')
+    }
+
     getErrorUser(){
       return cy.fixture('users/errorUser.json');
     }
