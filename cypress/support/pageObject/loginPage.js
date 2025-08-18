@@ -6,9 +6,6 @@ class loginPage{
         passwordField : () => cy.get("[data-test=password]"),
         loginButton : () => cy.get("[data-test=login-button]"),
         errorMessage : () => cy.get("[data-test=error]")
-
-        //loginBtn : () => cy.get("#signin"),
-        //logOffBtn : () => cy.get("#logout")
     }
 
     confirmUserNotLoggedIn(){
