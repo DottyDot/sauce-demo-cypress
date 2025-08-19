@@ -1,4 +1,4 @@
-class checkoutPage{
+class checkoutPage {
 
     elements = {
         pageTitle: () => cy.getByDataTestId('title'),
@@ -8,14 +8,14 @@ class checkoutPage{
         continueButton: () => cy.getByDataTestId('continue')
     }
 
-    fillInCorrectData(){
+    fillInCorrectData() {
         this.elements.nameField().type('Test')
         this.elements.surnameField().type('Test-Surname')
         this.elements.postalCode().type('12345')
         return this
     }
 
-    continueCheckout(){
+    continueCheckout() {
         this.elements.continueButton().click()
     }
 

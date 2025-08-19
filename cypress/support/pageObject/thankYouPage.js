@@ -1,4 +1,4 @@
-class thankYouPage{
+class thankYouPage {
 
     elements = {
         pageTitle: () => cy.getByDataTestId('title'),
@@ -8,12 +8,12 @@ class thankYouPage{
 
     }
 
-    confirmThankYouMessageIsShown(){
+    confirmThankYouMessageIsShown() {
         cy.checkIfContainsAndIsVisible(this.elements.thankYouHeader(), 'Thank you for your order!')
         cy.checkIfContainsAndIsVisible(this.elements.dispatchInfo(), 'Your order has been dispatched, and will arrive just as fast as the pony can get there!')
     }
 
-    goBackToInventory(){
+    goBackToInventory() {
         this.elements.backToInventoryButton().click()
     }
 }

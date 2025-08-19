@@ -1,4 +1,4 @@
-class inventoryPage{
+class inventoryPage {
 
     elements = {
         inventoryItem: () => cy.getByDataTestId('inventory-item'),
@@ -8,17 +8,17 @@ class inventoryPage{
         cartItemCountBadge: () => cy.getByDataTestId('shopping-cart-badge')
     }
 
-    goToCart(){
+    goToCart() {
         this.elements.cartButton().click()
         return this
     }
 
-    addBackpackToCart(){
+    addBackpackToCart() {
         this.elements.addBackpackToCartButton().click()
         return this
     }
 
-    addOnesieToCart(){
+    addOnesieToCart() {
         this.elements.addOnesieToCartButton().click()
         return this
     }
