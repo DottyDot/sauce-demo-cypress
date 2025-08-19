@@ -1,5 +1,5 @@
 
-import loginPage, { elements } from "../support/pageObject/loginPage"
+import loginPage from "../support/pageObject/loginPage"
 import inventoryPage from "../support/pageObject/inventoryPage"
 import cartPage from "../support/pageObject/cartPage"
 import checkoutPage from "../support/pageObject/checkoutPage"

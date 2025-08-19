@@ -3,12 +3,12 @@ import loginPage from "../support/pageObject/loginPage"
 describe('login tests', () => {
   beforeEach(() => {
     cy.visit('/')
-  }),
+  })
 
     it('User logs in with standard user data', () => {
       loginPage.loginwithStandardUser()
       cy.url().should('include', 'saucedemo.com/inventory.html')
-    }),
+    })
 
     it('User tries to log in with locked out user data and gets an error', () => {
       loginPage.getLockedOutUser().then((user) => {
@@ -16,13 +16,13 @@ describe('login tests', () => {
       })
       loginPage.elements.errorMessage().should('contain', 'Sorry, this user has been locked out.').and('be.visible')
       loginPage.confirmUserNotLoggedIn()
-    }),
+    })
 
     it('User tries to log in without credentials', () => {
       loginPage.elements.loginButton().click()
       loginPage.elements.errorMessage().should('contain', 'Username is required')
       loginPage.confirmUserNotLoggedIn()
-    }),
+    })
 
     it('User tries to log in with only username', () => {
       loginPage.getStandardUser().then((user) => {
@@ -32,5 +32,6 @@ describe('login tests', () => {
       loginPage.elements.errorMessage().should('contain', 'Password is required')
       loginPage.confirmUserNotLoggedIn()
     })
+
 })
 
