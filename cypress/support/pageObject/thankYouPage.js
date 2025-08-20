@@ -16,6 +16,10 @@ class thankYouPage {
     goBackToInventory() {
         this.elements.backToInventoryButton().click()
     }
+
+    verifyThankYouPageUrl(){
+        cy.verifyUrl('/checkout-complete')
+    }
 }
 
 module.exports = new thankYouPage()
