@@ -1,4 +1,5 @@
 import loginPage from "../support/pageObject/loginPage"
+import inventoryPage from "../support/pageObject/inventoryPage"
 
 describe('login tests', () => {
   beforeEach(() => {
@@ -7,7 +8,7 @@ describe('login tests', () => {
 
     it('User logs in with standard user data', () => {
       loginPage.loginwithStandardUser()
-      cy.url().should('include', 'saucedemo.com/inventory.html')
+      inventoryPage.verifyInventoryUrl()      
     })
 
     it('User tries to log in with locked out user data and gets an error', () => {

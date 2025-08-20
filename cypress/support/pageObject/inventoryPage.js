@@ -22,6 +22,10 @@ class inventoryPage {
         this.elements.addOnesieToCartButton().click()
         return this
     }
+
+    verifyInventoryUrl(){
+        cy.verifyUrl('/inventory')
+    }
 }
 
 module.exports = new inventoryPage()

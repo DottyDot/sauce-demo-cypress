@@ -19,6 +19,10 @@ class checkoutPage {
         this.elements.continueButton().click()
     }
 
+    verifyCheckoutUrl(){
+        cy.verifyUrl('/checkout-step-one')
+    }
+
 }
 
 module.exports = new checkoutPage()

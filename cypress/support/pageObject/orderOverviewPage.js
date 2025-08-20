@@ -27,5 +27,9 @@ class orderOverviewPage {
         return this
     }
 
+    verifyOrderOverview(){
+        cy.verifyUrl('/checkout-step-two')
+    }
+
 }
 module.exports = new orderOverviewPage()

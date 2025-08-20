@@ -23,6 +23,10 @@ class cartPage {
         return this
     }
 
+    verifyCartUrl(){
+        cy.verifyUrl('/cart')
+    }
+
 }
 
 module.exports = new cartPage()
